@@ -227,5 +227,14 @@
                 }
             }
         }
+    article, section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px 20px;
+
+        h2 {
+            color: #f00;
+        }
+    }
     /*}*/
 </style>
