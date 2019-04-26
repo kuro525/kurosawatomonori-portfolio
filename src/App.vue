@@ -16,6 +16,8 @@
     import FooterComponent from "./views/Footer.vue";
 
 
+
+
     export default {
         components: {
             HeaderComponent,
