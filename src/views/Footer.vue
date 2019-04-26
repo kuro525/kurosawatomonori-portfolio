@@ -11,8 +11,11 @@
 
     @Component
     export default class Footer extends Vue {
+        public date: number = 0;
 
-        date: number = new Date().getFullYear();
+        public created() {
+            this.date = new Date().getFullYear();
+        }
     }
 
 

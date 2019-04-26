@@ -1,11 +1,15 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
+
 Vue.use(Router);
 
-import Home from './views/Home.vue';
+
+// import Home from './views/Home.vue';
 
 import Profile from './views/Profile.vue';
+import Portfolio from './views/Portfolio.vue'
+
 
 
 export default new Router({
@@ -16,6 +20,11 @@ export default new Router({
       path: '/',
       name: 'Profile',
       component: Profile,
+    },
+    {
+      path: '/portfolio',
+      name: 'Portfolio',
+      component: Portfolio,
     },
     {
       path: '/about',
