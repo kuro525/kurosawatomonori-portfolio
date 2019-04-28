@@ -10,7 +10,7 @@
                     #{{ tag }}
                 </a>
                 <p>{{content.date | dayFormat }}</p>
-                <img :src="content.img | imgUrl('350_9999_100')" alt="">
+                <img v-if="content.img != null" :src="content.img | imgUrl('350_9999_100')" alt="">
                 <br><br><br>
             </article>
         </section>

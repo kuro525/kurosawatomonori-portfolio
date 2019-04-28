@@ -28,7 +28,7 @@ export default new Router({
         },
         {
             path: '/portfolio/:id',
-            name: 'Portfolio',
+            name: 'PortfolioDetail',
             component: PortfolioDetail,
         },
         // {

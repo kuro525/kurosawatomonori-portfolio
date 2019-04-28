@@ -24,7 +24,8 @@ export default new Vuex.Store({
                         const path = data.data().img[0].path;
 
                         const content = {
-                            img: path,
+                            img: null,
+                            imgPath: path,
                             title: data.data().title,
                             content: data.data().content,
                             tags: data.data().tag,
@@ -39,7 +40,7 @@ export default new Vuex.Store({
                 })
                 .then(() => {
                     contents.forEach((content) => {
-                        db.doc(content.img).get()
+                        db.doc(content.imgPath).get()
                             .then((response) => {
                                 content.img = response.data().file;
                             });
