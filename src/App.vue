@@ -1,6 +1,7 @@
 <template>
     <div id="app">
         <header-component></header-component>
+        <navigation-menu-component></navigation-menu-component>
         <transition mode="out-in">
             <router-view></router-view>
         </transition>
@@ -14,12 +15,14 @@
 <script lang="ts">
     import HeaderComponent from "./views/Header.vue";
     import FooterComponent from "./views/Footer.vue";
+    import NavigationMenuComponent from "./views/NavigationMenu.vue"
 
 
     export default {
         components: {
             HeaderComponent,
             FooterComponent,
+            NavigationMenuComponent,
         },
 
         created() {
@@ -32,5 +35,4 @@
 
 <style lang="scss">
    @import 'assets/style/transition';
-
 </style>
