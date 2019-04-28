@@ -26,6 +26,9 @@ export const app = flamelink({
   dbType: 'cf', // optional, defaults to `rtdb` - can be 'rtdb' or 'cf' (Real-time DB vs Cloud Firestore)
 });
 
+// flamelink使うときは
+// import {app} from '../main';
+
 Vue.config.productionTip = false;
 
 new Vue({

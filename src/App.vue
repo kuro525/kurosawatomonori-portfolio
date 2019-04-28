@@ -23,7 +23,13 @@
             HeaderComponent,
             FooterComponent,
         },
+
+        created(){
+            this.$store.dispatch('setContents')
+        },
     };
+
+
 </script>
 
 <style lang="scss">
