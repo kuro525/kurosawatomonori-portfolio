@@ -31,11 +31,18 @@ export const app = flamelink({
 
 Vue.config.productionTip = false;
 
-Vue.filter('imgUrl', (imgName: string) => {
-  const size = '1080_9999_100';
+Vue.filter('imgUrl', (imgName: string, size: string) => {
   return `https://firebasestorage.googleapis.com/v0/b/portfolio-161c4.appspot.com/o/flamelink%2Fmedia%2Fsized%2F${size}%2F${imgName}?alt=media`;
-
 });
+
+Vue.filter('dayFormat', (date: string) => {
+    const value = date.substr(0, 7);
+    const reg = new RegExp('-', 'g');
+    return value.replace(reg, '.');
+})
+
+
+
 
 
 new Vue({

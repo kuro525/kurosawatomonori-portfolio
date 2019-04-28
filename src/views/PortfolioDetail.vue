@@ -1,10 +1,11 @@
 <template>
     <div>
         <h1>{{content.title}}</h1>
-        <p>{{content.date}}</p>
-        <p>{{content.img}}</p>
-        <img :src="content.img |imgUrl " alt="">
-        <a href="" v-for="tag in content.tags">{{ tag }}</a>
+        <p>{{content.date | dayFormat}}</p>
+        <img :src="content.img | imgUrl('1080_9999_100')" alt="">
+        <a href="" v-for="tag in content.tags">
+            #{{ tag }}
+        </a>
 
         <div v-html="content.content"></div>
 

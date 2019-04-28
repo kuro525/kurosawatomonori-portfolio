@@ -9,8 +9,8 @@
                 <a href="" v-for="tag in content.tags">
                     #{{ tag }}
                 </a>
-                <img :src="content.img | imgUrl" alt="">
-
+                <p>{{content.date | dayFormat }}</p>
+                <img :src="content.img | imgUrl('350_9999_100')" alt="">
                 <br><br><br>
             </article>
         </section>
