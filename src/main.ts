@@ -25,6 +25,9 @@ const firebaseConfig = {
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
+export const db = firebaseApp.firestore();
+
+
 export const app = flamelink({
   firebaseApp,
   env: 'production', // optional, defaults to `production`
@@ -39,3 +42,4 @@ new Vue({
   store,
   render: (h) => h(App),
 }).$mount('#app');
+
