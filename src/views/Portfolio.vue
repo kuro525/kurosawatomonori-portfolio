@@ -1,65 +1,87 @@
 <template>
-<div>
-    <section>
-       <article v-for="content in contents ">
-           <a href=""></a>
-            <h2>{{ content.title}}</h2>
-           <a href="" v-for="tag in content.tags">{{ tag }}</a>
-           <div v-html="content.content"></div>
-           <br><br><br>
-       </article>
-    </section>
-</div>
+    <div>
+        <section>
+            <article v-for="content in contents ">
+                <a href=""></a>
+                <h2>{{ content.title}}</h2>
+                <a href="" v-for="tag in content.tags">{{ tag }}</a>
+                <div v-html="content.content"></div>
+                <!--{{ content.img | imgUrl }}-->
+                <img :src="content.img | imgUrl" alt="">
+
+                <br><br><br>
+            </article>
+        </section>
+    </div>
 </template>
 
-<script >
+<script>
 
     import {app} from '../main';
+    import {db} from '../main';
+
 
     export default {
         name: "Portfolio",
-        data(){
-            return{
-                contents:[],
+        data() {
+            return {
+                contents: [],
+            }
+        },
+
+        filters:{
+            imgUrl(imgName){
+                const size = '1080_9999_100';
+                return `https://firebasestorage.googleapis.com/v0/b/portfolio-161c4.appspot.com/o/flamelink%2Fmedia%2Fsized%2F${size}%2F${imgName}?alt=media`;
+
+
             }
         },
         methods: {
-            hoge: function () {
-                app.content.get('portfolio')
-                    .then(response => {
-                        console.log(response);
-                        Object.keys(response).forEach((key) => {
+            getData() {
+                db.collection("fl_content").get()
+                    .then((response) => {
+                        response.forEach((data) => {
 
-                            // console.log(key);
-                            console.log(response[key].content);
-                            // console.log(response[key].tag);
-                            // console.log(response[key].date);
-                            // console.log(response[key].content);
-                            // console.log(response[key].public);
-                            // contents.push(response[key]);
-                            // this.contents.push(response[key]);
-                            const res = response[key];
+                            const path = data.data().img[0].path;
+
                             const content = {
-                                'title': res.title,
-                                'content': res.content,
-                                'tags': res.tag,
-                                'date': res.date,
-                                'public': res.public,
-                                'key': key,
+                                'img': path,
+                                'title': data.data().title,
+                                'content': data.data().content,
+                                'tags': data.data().tag,
+                                'date': data.data().date,
+                                'public': data.data().public,
                             };
-
-                            console.log(content);
                             this.contents.push(content);
+
                         });
+                    })
+                    .then(() => {
+                        this.getImgUrl()
                     });
+
             },
+            getImgUrl() {
+
+                this.contents.forEach(content => {
+
+                    db.doc(content.img).get()
+                        .then(response => {
+
+                            content.img = response.data().file;
+
+                        });
+                })
+            }
+
 
         },
         mounted() {
+
         },
         created() {
-            this.hoge();
-
+            this.getData();
         },
     };
 </script>
