@@ -12,16 +12,7 @@ import flamelink from 'flamelink/app';
 import 'flamelink/content';
 import 'flamelink/storage';
 
-
-const firebaseConfig = {
-  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
-  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.VUE_APP_FIREBASE_DATABASE_URL,
-  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID,
-};
-
+import firebaseConfig from '@/firebaseConfig';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
@@ -34,6 +25,9 @@ export const app = flamelink({
   locale: 'en-US', // optional, defaults to `en-US`
   dbType: 'cf', // optional, defaults to `rtdb` - can be 'rtdb' or 'cf' (Real-time DB vs Cloud Firestore)
 });
+
+// flamelink使うときは
+// import {app} from '../main';
 
 Vue.config.productionTip = false;
 
