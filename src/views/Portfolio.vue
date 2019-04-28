@@ -3,6 +3,9 @@
         <section>
             <article v-for="content in this.$store.state.contents ">
                 <a href=""></a>
+                <router-link :to="content.url | linkFormat">
+                    {{ content.url | linkFormat }}
+                </router-link>
                 <h2>{{ content.title}}</h2>
                 <a href="" v-for="tag in content.tags">{{ tag }}</a>
                 <div v-html="content.content"></div>
@@ -19,24 +22,19 @@
     export default {
         name: "Portfolio",
         data() {
-            return {
+            return {};
+        },
 
+        filters: {
+            linkFormat(url: string){
+
+
+                return `portfolio/${url}`
             }
         },
-
-        filters:{
-            imgUrl(imgName){
-                const size = '1080_9999_100';
-                return `https://firebasestorage.googleapis.com/v0/b/portfolio-161c4.appspot.com/o/flamelink%2Fmedia%2Fsized%2F${size}%2F${imgName}?alt=media`;
-            }
-        },
-        methods: {
-
-        },
-        mounted() {
-        },
-        created() {
-        },
+        // methods: {},
+        // mounted() {},
+        // created() {},
     };
 </script>
 

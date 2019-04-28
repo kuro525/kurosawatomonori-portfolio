@@ -16,16 +16,14 @@
     import FooterComponent from "./views/Footer.vue";
 
 
-
-
     export default {
         components: {
             HeaderComponent,
             FooterComponent,
         },
 
-        created(){
-            this.$store.dispatch('setContents')
+        created() {
+            this.$store.dispatch("setContents")
         },
     };
 
