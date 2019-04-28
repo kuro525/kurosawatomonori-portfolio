@@ -71,14 +71,19 @@
 
                             content.img = response.data().file;
 
+                            // console.log(content.img)
                         });
+
+
                 })
+                // console.log(this.contents)
             }
 
 
         },
         mounted() {
 
+            // console.log(this.$store.state.contents)
         },
         created() {
             this.getData();
