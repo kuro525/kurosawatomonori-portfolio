@@ -2,7 +2,7 @@
     <div>
         <section>
             <article v-for="content in this.$store.state.contents ">
-                <router-link :to="`portfolio/${content.url }`">
+                <router-link :to="`Portfolio/${content.url }`">
                     {{ content.url }}
                 </router-link>
                 <h2>{{ content.title}}</h2>
