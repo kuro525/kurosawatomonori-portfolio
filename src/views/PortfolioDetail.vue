@@ -120,7 +120,7 @@
 
     .top {
         position: relative;
-        background-color: #000;
+        background-color: #fff;
         overflow: hidden;
         margin-bottom: 3rem;
 

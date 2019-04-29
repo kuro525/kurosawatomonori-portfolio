@@ -39,7 +39,7 @@ Vue.filter('dayFormat', (date: string) => {
     const value = date.substr(0, 7);
     const reg = new RegExp('-', 'g');
     return value.replace(reg, '.');
-})
+});
 
 
 

@@ -46,7 +46,7 @@
             <div class="skill">
                 <span>HTML/CSS</span>
                 <div class="bar">
-                    <div class="percent" style="width:20%"></div>
+                    <div class="percent" style="width:80%"></div>
                 </div>
             </div>
             <div class="skill">
@@ -58,13 +58,13 @@
             <div class="skill">
                 <span>Laravel</span>
                 <div class="bar">
-                    <div class="percent" style="width:20%"></div>
+                    <div class="percent" style="width:70%"></div>
                 </div>
             </div>
             <div class="skill">
                 <span>JavaScript</span>
                 <div class="bar">
-                    <div class="percent" style="width:20%"></div>
+                    <div class="percent" style="width:50%"></div>
                 </div>
             </div>
             <div class="skill">
@@ -82,31 +82,31 @@
             <div class="skill">
                 <span>Vue Native</span>
                 <div class="bar">
-                    <div class="percent" style="width:20%"></div>
+                    <div class="percent" style="width:5%"></div>
                 </div>
             </div>
             <div class="skill">
                 <span>Firebase</span>
                 <div class="bar">
-                    <div class="percent" style="width:20%"></div>
+                    <div class="percent" style="width:40%"></div>
                 </div>
             </div>
             <div class="skill">
                 <span>GraphQL</span>
                 <div class="bar">
-                    <div class="percent" style="width:20%"></div>
+                    <div class="percent" style="width:5%"></div>
                 </div>
             </div>
             <div class="skill">
                 <span>MySQL</span>
                 <div class="bar">
-                    <div class="percent" style="width:20%"></div>
+                    <div class="percent" style="width:60%"></div>
                 </div>
             </div>
             <div class="skill">
                 <span>NoSQL</span>
                 <div class="bar">
-                    <div class="percent" style="width:20%"></div>
+                    <div class="percent" style="width:50%"></div>
                 </div>
             </div>
             <div class="skill">
@@ -118,7 +118,7 @@
             <div class="skill">
                 <span>Git</span>
                 <div class="bar">
-                    <div class="percent" style="width:20%"></div>
+                    <div class="percent" style="width:60%"></div>
                 </div>
             </div>
         </section>

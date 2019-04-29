@@ -10,6 +10,9 @@ Vue.use(Router);
 import Profile from './views/Profile.vue';
 import Portfolio from './views/Portfolio.vue';
 import PortfolioDetail from '@/views/PortfolioDetail.vue';
+import Contact from '@/views/Contact.vue';
+import ContactSent from '@/views/ContactSent.vue';
+
 
 
 export default new Router({
@@ -22,22 +25,31 @@ export default new Router({
             component: Profile,
         },
         {
-            path: '/portfolio',
+            path: '/Portfolio',
             name: 'Portfolio',
             component: Portfolio,
         },
         {
-            path: '/portfolio/:id',
+            path: '/Portfolio/:id',
             name: 'PortfolioDetail',
             component: PortfolioDetail,
         },
-        // {
-        //     path: '/about',
-        //     name: 'about',
-        //     // route level code-splitting
-        //     // this generates a separate chunk (about.[hash].js) for this route
-        //     // which is lazy-loaded when the route is visited.
-        //     component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
-        // },
+        {
+            path: '/Contact',
+            name: 'Contact',
+            component: Contact,
+        },
+        {
+            path: '/Contact/Sent',
+            name: 'ContactSent',
+            component: ContactSent,
+            beforeEnter: (to, from, next) => {
+                if (from.path === '/Contact') {
+                    next();
+                } else {
+                    next({path: '/'});
+                }
+            },
+        },
     ],
 });

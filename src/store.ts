@@ -41,7 +41,7 @@ export default new Vuex.Store({
                 .then(() => {
                     contents.forEach((content) => {
                         db.doc(content.imgPath).get()
-                            .then((response) => {
+                            .then((response: any) => {
                                 content.img = response.data().file;
                             });
 
