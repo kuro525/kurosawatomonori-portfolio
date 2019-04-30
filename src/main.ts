@@ -5,6 +5,16 @@ import store from './store';
 import './registerServiceWorker';
 
 
+import Vuetify from 'vuetify';
+import '@fortawesome/fontawesome-free/css/all.min.css'; // Ensure you are using css-loader
+
+Vue.use(Vuetify);
+import 'vuetify/dist/vuetify.min.css';
+
+Vue.use(Vuetify, {
+    iconfont: 'fa',
+});
+
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
@@ -37,7 +47,7 @@ Vue.filter('imgUrl', (imgName: string, size: string) => {
 
 Vue.filter('dayFormat', (date: string) => {
     const value = date.substr(0, 7);
-    const reg = new RegExp('-', 'g');
+    const reg = new RegExp(`-`, 'g');
     return value.replace(reg, '.');
 });
 
@@ -45,5 +55,5 @@ new Vue({
     router,
     store,
     render: (h) => h(App),
-}).$mount('#app');
 
+}).$mount('#app');

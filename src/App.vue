@@ -26,7 +26,7 @@
         },
 
         created() {
-            this.$store.dispatch("setContents")
+            this.$store.dispatch("setContents");
         },
     };
 
