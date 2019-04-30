@@ -2,7 +2,7 @@
     <section>
         <h2>📨 Contact Me</h2>
         <p>
-            お問い合わせ、アポイント等ございましたら、下記のフォームまたはメールアドレスよりご連絡下さい。
+            お問い合わせ、アポイント等ございましたら、下記のフォームまたはメールアドレスよりご連絡下さい！
         </p>
         <p>
             <strong>「kurosawa.developer[at]gmail.com」</strong>
@@ -66,8 +66,8 @@
 
 </template>
 
-<script lang="ts">
-    import {db} from "@/main";
+<script>
+    import {db} from "../main";
     import axios from "axios";
     import {load} from "recaptcha-v3";
 
@@ -100,22 +100,22 @@
         },
         watch: {
             company(company) {
-                if (company != "") {
+                if (company !== "") {
                     this.input.campany = false;
                 }
             },
             name(name) {
-                if (name != "") {
+                if (name !== "") {
                     this.input.name = false;
                 }
             },
             email(email) {
-                if (email != "") {
+                if (email !== "") {
                     this.input.email = false;
                 }
             },
             multiText(multiText) {
-                if (multiText != "") {
+                if (multiText !== "") {
                     this.input.multiText = false;
                 }
             }
