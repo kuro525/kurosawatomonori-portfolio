@@ -4,6 +4,7 @@ import router from './router';
 import store from './store';
 import './registerServiceWorker';
 
+
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
@@ -15,7 +16,6 @@ import 'flamelink/storage';
 import firebaseConfig from '@/firebaseConfig';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
-
 export const db = firebaseApp.firestore();
 
 
@@ -32,7 +32,7 @@ export const app = flamelink({
 Vue.config.productionTip = false;
 
 Vue.filter('imgUrl', (imgName: string, size: string) => {
-  return `https://firebasestorage.googleapis.com/v0/b/portfolio-161c4.appspot.com/o/flamelink%2Fmedia%2Fsized%2F${size}%2F${imgName}?alt=media`;
+    return `https://firebasestorage.googleapis.com/v0/b/portfolio-161c4.appspot.com/o/flamelink%2Fmedia%2Fsized%2F${size}%2F${imgName}?alt=media`;
 });
 
 Vue.filter('dayFormat', (date: string) => {
@@ -40,10 +40,6 @@ Vue.filter('dayFormat', (date: string) => {
     const reg = new RegExp('-', 'g');
     return value.replace(reg, '.');
 });
-
-
-
-
 
 new Vue({
     router,
