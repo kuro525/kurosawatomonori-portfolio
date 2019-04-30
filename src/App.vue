@@ -12,10 +12,10 @@
     </div>
 </template>
 
-<script lang="ts">
+<script>
     import HeaderComponent from "./views/Header.vue";
     import FooterComponent from "./views/Footer.vue";
-    import NavigationMenuComponent from "./views/NavigationMenu.vue"
+    import NavigationMenuComponent from "./views/NavigationMenu.vue";
 
 
     export default {
@@ -34,5 +34,5 @@
 </script>
 
 <style lang="scss">
-   @import 'assets/style/transition';
+    @import 'assets/style/transition';
 </style>
