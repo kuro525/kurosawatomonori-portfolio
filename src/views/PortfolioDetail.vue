@@ -73,19 +73,6 @@
 </script>
 
 <style scoped lang="scss">
-
-    @media screen and (min-width: 897px) {
-
-        .top {
-            height: 500px;
-
-        }
-    }
-
-    a {
-        color: #08c;
-    }
-
     header {
         max-width: 900px;
         margin: 0 auto;

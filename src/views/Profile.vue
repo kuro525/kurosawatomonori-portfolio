@@ -11,7 +11,7 @@
             <p>
                 <!--主にWebを中心とした技術の勉強をしています。-->
                 <!--主にWebを中心とした勉強をしていて、常に新しい技術への好奇心を持っていろいろな事にチャレンジしています。-->
-                主にWebを中心とした勉強をしていて、最近ではFirebaseやNuxt.js、GraphQLなどの技術に興味があるのでそれらを用いてPWAに対応したWebサービスを開発中です。
+                主にWebを中心とした勉強をしていて、最近ではFirebaseやNuxt.js、GraphQLなどの技術に興味があるのでそれらを用いてPWAに対応したWebアプリケーションを開発しています。
             </p>
             <p>
                 <!--現在は、FirebaseやNuxt.js、GraphQLなどの技術を用いてPWAに対応したWebサービスを開発中です。-->
@@ -46,13 +46,13 @@
             <div class="skill">
                 <span>HTML/CSS</span>
                 <div class="bar">
-                    <div class="percent" style="width:80%"></div>
+                    <div class="percent" style="width:85%"></div>
                 </div>
             </div>
             <div class="skill">
                 <span>PHP</span>
                 <div class="bar">
-                    <div class="percent" style="width:20%"></div>
+                    <div class="percent" style="width:70%"></div>
                 </div>
             </div>
             <div class="skill">
@@ -64,7 +64,7 @@
             <div class="skill">
                 <span>JavaScript</span>
                 <div class="bar">
-                    <div class="percent" style="width:50%"></div>
+                    <div class="percent" style="width:70%"></div>
                 </div>
             </div>
             <div class="skill">
@@ -76,7 +76,7 @@
             <div class="skill">
                 <span>Vue.js (Nuxt.js)</span>
                 <div class="bar">
-                    <div class="percent" style="width:20%"></div>
+                    <div class="percent" style="width:70%"></div>
                 </div>
             </div>
             <div class="skill">
@@ -88,7 +88,7 @@
             <div class="skill">
                 <span>Firebase</span>
                 <div class="bar">
-                    <div class="percent" style="width:40%"></div>
+                    <div class="percent" style="width:70%"></div>
                 </div>
             </div>
             <div class="skill">
@@ -118,7 +118,7 @@
             <div class="skill">
                 <span>Git</span>
                 <div class="bar">
-                    <div class="percent" style="width:60%"></div>
+                    <div class="percent" style="width:70%"></div>
                 </div>
             </div>
         </section>
@@ -157,7 +157,6 @@
                 <i class="fas fa-square fa-stack-2x" ></i>
                 <i class="fas fa-search fa-stack-1x fa-inverse fa-2x"></i>
             </a>
-
         </section>
     </article>
 
@@ -242,10 +241,16 @@
     }
 
 
-    article, section {
+    article {
         max-width: 800px;
         margin: 0 auto;
         padding: 30px 20px;
 
+    }
+
+    section{
+        /*max-width: 800px;*/
+        margin: 0 auto;
+        padding: 20px 0;
     }
 </style>
