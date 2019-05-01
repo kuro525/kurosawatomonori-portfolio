@@ -6,7 +6,7 @@
                 初めまして。黒澤 智倫<a href="https://twitter.com/kurosawa525" target="_blank" rel="noopener" title="Twitter">(＠kurosawa525)</a>と申します。
                 1997年生まれの21歳。
                 <!--HAL東京と言う専門学校の3年生です。<br>-->
-                HAL東京と言う専門学校でIT学部 Web開発学科を専攻している3年生です。
+                HAL東京と言う専門学校でIT学部 Web開発学科を専攻している3年生です。(2021年卒業予定)
             </p>
             <p>
                 <!--主にWebを中心とした技術の勉強をしています。-->

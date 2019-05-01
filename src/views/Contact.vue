@@ -2,10 +2,10 @@
     <section>
         <h2>📨 Contact Me</h2>
         <p>
-            お問い合わせ、アポイント等ございましたら、下記のフォームまたはメールアドレスよりご連絡下さい！
+            お問い合わせ、アポイント等ございましたら、下記のフォームまたはメールアドレスよりお気軽にご連絡下さい！
         </p>
         <p>
-            <strong>「kurosawa.developer[at]gmail.com」</strong>
+            <strong>「 kurosawa.developer[at]gmail.com 」</strong>
             ([at]を@に変換）
         </p>
         <p>
@@ -68,6 +68,7 @@
 
 <script>
     import {db} from "../main";
+
     import axios from "axios";
     import {load} from "recaptcha-v3";
 
@@ -161,11 +162,17 @@
 
 
                 axios.post(url, data)
-                    .then(() => {
-                        this.$router.push({path: "/Contact/Sent"});
+                    .then((res) => {
+                        console.log(res.data.result );
+                        if (res.data.result === 'ok'){
+                            this.$router.push({path: "/Contact/Sent"});
+                        } else{
+                            alert('エラーが発生しました。リロードしてからもう一度お試しください')
+                        }
                     })
                     .catch(e => {
                         console.log(e);
+                        alert('エラーが発生しました。リロードしてからもう一度お試しください')
                     });
 
 
@@ -186,6 +193,7 @@
             },
 
 
+
             async asyncFunction() {
                 const recaptcha = await load(process.env.VUE_APP_RECAPTCHA_KEY);
                 this.params.token = await recaptcha.execute("homepage");
@@ -200,6 +208,8 @@
 </script>
 
 <style scoped lang="scss">
+    $color: #F8BA00;
+
     section {
         padding: 2rem;
         max-width: 700px;
@@ -225,7 +235,7 @@
                 font-size: 18px;
                 background-color: #1f2533;
                 color: #fff;
-                font-weight: bold;
+                /*font-weight: bold;*/
                 width: 300px;
                 height: 60px;
                 border-radius: 20px;
@@ -240,13 +250,16 @@
                 transition: .4s;
 
                 &:hover {
-                    /*color: #000;*/
-                    background-color: #F8BA00;
+                    background: #fff;
+                    color: #f8921b;
+                    font-weight: 800;
+                    border: solid 3px $color;
                 }
 
                 &:disabled {
                     background-color: #606060;
                     cursor: not-allowed;
+                    border: none;
                 }
             }
 

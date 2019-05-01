@@ -4,7 +4,6 @@ import router from './router';
 import store from './store';
 import './registerServiceWorker';
 
-
 import Vuetify from 'vuetify';
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Ensure you are using css-loader
 
