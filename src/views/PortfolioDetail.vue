@@ -3,11 +3,11 @@
         <article v-if="content !=null">
             <header>
                 <time>{{content.date | dayFormat}}</time>
-                <h1>{{content.title}}</h1>
+                <h1>{{content.entryTitle}}</h1>
                 <div class="tag">
-                    <a href="" v-for="tag in content.tags">
+                    <span v-for="tag in content.tags">
                         #{{ tag }}
-                    </a>
+                    </span>
                 </div>
             </header>
             <div class="top">
@@ -15,6 +15,7 @@
                 <img v-if="content.img != null" :src="content.img | imgUrl('1080_9999_100')" alt="" class="topimg">
                 <h1>{{content.title}}</h1>
             </div>
+
             <div class="content" v-html="content.content">
 
             </div>
@@ -81,7 +82,7 @@
 
         }
     }
-    
+
     header {
         max-width: 900px;
         margin: 0 auto;
@@ -101,11 +102,10 @@
         }
 
         .tag {
-            a {
+            span {
                 font-size: 16px;
                 margin-right: 10px;
                 font-weight: 500;
-                text-decoration: none;
             }
 
             margin-bottom: 3rem;
@@ -116,7 +116,7 @@
 
     .top {
         position: relative;
-        background-color: #fff;
+        /*background-color: #fff;*/
         overflow: hidden;
         margin-bottom: 3rem;
 

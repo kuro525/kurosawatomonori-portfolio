@@ -27,6 +27,7 @@ export default new Vuex.Store({
                             img: null,
                             imgPath: path,
                             title: data.data().title,
+                            entryTitle: data.data().entryTitle,
                             content: data.data().content,
                             tags: data.data().tag,
                             date: data.data().date,

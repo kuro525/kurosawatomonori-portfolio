@@ -43,7 +43,7 @@
 
     @media screen and (min-width: 481px) {
         p {
-            font-size: 17px;
+            font-size: 16px;
         }
         ul {
             height: 45px;
@@ -52,7 +52,7 @@
 
     @media screen and (min-width: 897px) {
         p {
-            font-size: 22px;
+            font-size: 19px;
         }
         ul {
             height: 50px;
@@ -65,7 +65,7 @@
         position: sticky;
         top: 0;
         background-color: #fff;
-        z-index: 1;
+        z-index: 2;
 
         ul {
             padding: 0;
