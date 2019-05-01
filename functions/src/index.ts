@@ -2,7 +2,7 @@ import * as functions from 'firebase-functions';
 import * as request from 'request-promise';
 import * as admin from 'firebase-admin';
 import axios from 'axios';
-
+//
 admin.initializeApp();
 const timestamp = admin.firestore.FieldValue.serverTimestamp();
 
@@ -41,43 +41,42 @@ ${data.multiText}`;
 });
 
 
-exports.firestoreAdd = functions.region('asia-northeast1').https.onCall((data, context) => {
+exports.firestoreAdd = functions.region('asia-northeast1').https.onCall(async (data, context) => {
 
-    const url = `https://www.google.com/recaptcha/api/siteverify?secret=${functions.config().recaptcha.key}&response=${data.token}`;
-
-
-    axios.post(url)
-        .then((response: any) => {
-            console.log(response.data);
-
-            if (response.data.score > 0.3) {
-                firestoreDataAdd();
-                console.log('reCAPTCHA_v3_スコアOK');
-            } else {
-                throw new Error(`reCAPTCHA_v3_スコアNG`);
-            }
-
-        })
-        .catch(e => {
-            throw new Error(`reCAPTCHA_v3エラー__${e}`,);
-        });
-
-
-    function firestoreDataAdd() {
-        admin.firestore().collection('ContactMessage').add({
+    const firestore = () => {
+         admin.firestore().collection('ContactMessage').add({
             company: data.company,
             name: data.name,
             email: data.email,
             multiText: data.multiText,
             time: timestamp,
         })
-            .then(() => {
+             .then(() => {
                 console.log('Firestore: 追加完了');
+                return 'ok';
+
             })
             .catch((e) => {
                 console.log(e);
-                throw new Error(`データベースエラー__${e}`);
+                return new Error(`Firestore: エラー`);
             });
+    };
+
+    const url = `https://www.google.com/recaptcha/api/siteverify?secret=${functions.config().recaptcha.key}&response=${data.token}`;
+    const recaptcha = await axios.post(url);
+    try {
+        console.log(recaptcha.data);
+        if (recaptcha.data.score > 0.3) {
+            await firestore();
+            return 'ok';
+
+        } else {
+            console.error('reCAPTCHA_v3_スコアNG');
+            return new Error(`reCAPTCHA_v3_スコアNG`);
+        }
+    } catch (e) {
+        console.error(`エラー__${e}`);
+        return new Error(`エラー__${e}`,);
     }
 
 });
