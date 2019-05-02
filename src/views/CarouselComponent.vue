@@ -64,7 +64,18 @@
     @media screen and (max-width: 480px) {
         .textline {
             font-size: 30px;
-            animation: stroke-anim 2s linear;
+            animation: stroke-anim 5s linear;
+        }
+        @keyframes stroke-anim {
+            0% {
+                stroke-dashoffset: 155%;
+                fill: transparent;
+            }
+            50% {
+                fill: rgba(255, 255, 255, 0.2);
+                stroke-dashoffset: 100%;
+
+            }
         }
 
     }
@@ -74,11 +85,33 @@
             font-size: 50px;
             animation: stroke-anim 5s linear;
         }
+        @keyframes stroke-anim {
+            0% {
+                stroke-dashoffset: 155%;
+                fill: transparent;
+            }
+            60% {
+                fill: rgba(255, 255, 255, 0.2);
+                stroke-dashoffset: 100%;
+
+            }
+        }
     }
 
     @media screen and (min-width: 897px) {
         .VueCarousel-slide {
             height: 380px;
+        }
+        @keyframes stroke-anim {
+            0% {
+                stroke-dashoffset: 155%;
+                fill: transparent;
+            }
+            100% {
+                fill: rgba(255, 255, 255, 0.2);
+                stroke-dashoffset: 100%;
+
+            }
         }
     }
 
@@ -143,18 +176,6 @@
                         fill: rgba(255, 255, 255, 0.2);
                         stroke-dasharray: 150%;
                         stroke-width: 1px;
-                    }
-
-                    @keyframes stroke-anim {
-                        0% {
-                            stroke-dashoffset: 155%;
-                            fill: transparent;
-                        }
-                        100% {
-                            fill: rgba(255, 255, 255, 0.2);
-                            stroke-dashoffset: 100%;
-
-                        }
                     }
                 }
             }

@@ -23,17 +23,17 @@
         .dev {
             font-size: 25px;
         }
-        .textline{
-            /*animation: stroke-anim 5s 0.5s linear;*/
-        }
     }
+
 
     .firstLoading {
         font-weight: 600;
         position: fixed;
         top: 0;
+        /*background-color: red;*/
         background-image: url("https://firebasestorage.googleapis.com/v0/b/portfolio-161c4.appspot.com/o/flamelink%2Fmedia%2Frdwm7HoWHwwzgD2kajBp_IMGP1829.jpg?alt=media&token=0283b53a-0880-4a29-bc30-8dc44f366fd8");
         background-size: cover;
+        /*opacity: 0.7;*/
         height: 100vh;
         width: 100vw;
         z-index: 10;
@@ -53,7 +53,7 @@
                 /*fill: none;*/
                 stroke-dasharray: 150%;
                 stroke-width: 0.7px;
-                animation: stroke-anim 5s 0.7s linear;
+                animation: stroke-anim 4.5s 0.7s linear;
 
             }
 
@@ -72,13 +72,18 @@
 
                 }
 
-                100% {
-                    /*fill: transparent;*/
+                60% {
                     stroke: #fff;
+
+                }
+                80%{
                     fill: rgba(255, 255, 255, 0.8);
-                    /*!*stroke-dashoffset: 100%;*!*/
-                    /*stroke-dashoffset: 155%;*/
-                    /*fill: transparent;*/
+
+                }
+                100%{
+                    stroke: #fff;
+                    fill: rgba(255, 255, 255, 1);
+
                 }
             }
         }
