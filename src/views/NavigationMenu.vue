@@ -36,7 +36,7 @@
             font-size: 16px;
         }
         .ja{
-            font-size: 12px;
+            font-size: 13px;
         }
         ul {
             height: 45px;
