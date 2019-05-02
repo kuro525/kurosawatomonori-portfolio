@@ -7,7 +7,7 @@
                 <article v-for="content in this.$store.state.contents ">
                     <router-link :to="`Portfolio/${content.url }`" class="link">
                         <figure>
-                            <img v-if="content.img != null" :src="content.img | imgUrl('350_9999_100')" alt="">
+                            <img v-if="content.img != null" :src="content.img | imgUrl('400_9999_100')" alt="">
                         </figure>
 
                         <header>
@@ -71,7 +71,6 @@
             margin-bottom: 3rem;
 
             .link {
-
                 width: 100%;
                 height: 100%;
                 z-index: 1;
@@ -79,21 +78,17 @@
                 position: relative;
                 display: block;
                 background-color: #fff;
-                border-radius: 4px;
-                box-shadow: rgba(112, 112, 112, 0.51) 3px 3px 15px 3px;
+                border-radius: 15px;
+                box-shadow: rgba(112, 112, 112, 0.51) 3px 3px 10px 3px;
                 transition: .4s ease-in-out;
 
-                /*figure{*/
-                /*min-height: calc(100% - 40%);*/
-                /*height: 300px;*/
                 img {
                     width: 100%;
                     height: auto;
                     object-fit: cover;
-
+                    border-radius: 15px 15px 0 0;
                 }
 
-                /*}*/
                 header {
                     padding: 1rem;
 
