@@ -14,7 +14,7 @@
         >
             <slide v-for="(content, index) in this.$store.state.contents" :key="index">
                 <router-link :to="`Portfolio/${content.url }`"></router-link>
-                <img v-if="content.img" :src="content.img | imgUrl('350_9999_100')" alt="" class="back">
+                <img v-if="content.img" :src="content.img | imgUrl('400_9999_100')" alt="" class="back">
                 <img v-if="content.img" :src="content.img | imgUrl('1080_9999_100')" alt="" class="topimg">
                 <div class="info">
                     <svg>
@@ -64,7 +64,7 @@
     @media screen and (max-width: 480px) {
         .textline {
             font-size: 30px;
-            animation: stroke-anim 3s linear;
+            animation: stroke-anim 2s linear;
         }
 
     }

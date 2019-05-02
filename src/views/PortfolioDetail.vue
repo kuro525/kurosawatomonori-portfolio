@@ -85,7 +85,7 @@
 
     header {
         max-width: 900px;
-        margin: 0 auto;
+        margin: 20px auto;
         padding: 0 2rem;
 
         time {

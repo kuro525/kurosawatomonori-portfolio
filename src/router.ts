@@ -14,8 +14,17 @@ import Contact from '@/views/Contact.vue';
 import ContactSent from '@/views/ContactSent.vue';
 
 
-
 export default new Router({
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+
+            console.log(savedPosition);
+
+            return savedPosition;
+        } else {
+            return {x: 0, y: 330};
+        }
+    },
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [

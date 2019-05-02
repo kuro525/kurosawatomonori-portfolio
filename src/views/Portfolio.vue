@@ -7,7 +7,7 @@
                 <article v-for="content in this.$store.state.contents ">
                     <router-link :to="`Portfolio/${content.url }`" class="link">
                         <figure>
-                            <img v-if="content.img != null" :src="content.img | imgUrl('350_9999_100')" alt="">
+                            <img v-if="content.img != null" :src="content.img | imgUrl('400_9999_100')" alt="">
                         </figure>
 
                         <header>
