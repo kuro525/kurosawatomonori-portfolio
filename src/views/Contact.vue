@@ -174,22 +174,6 @@
                         console.log(e);
                         alert('エラーが発生しました。リロードしてからもう一度お試しください')
                     });
-
-
-                db.collection("MessageBackup").add({
-                    company: this.company,
-                    name: this.name,
-                    email: this.email,
-                    multiText: this.multiText,
-                    time: new Date(),
-                })
-                    .then(() => {
-                        // console.log("MessageBackup_完了");
-                    })
-                    .catch(e => {
-                        console.log("失敗");
-                        console.log(e);
-                    });
             },
 
 

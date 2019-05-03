@@ -1,13 +1,14 @@
 <template>
     <div>
         <h2>📙 Portfolio</h2>
-        <carousel-component></carousel-component>
+        <carousel-component :load="isLoading"></carousel-component>
         <div class="list">
             <div class="contents">
                 <article v-for="content in this.$store.state.contents ">
                     <router-link :to="`Portfolio/${content.url }`" class="link">
                         <figure>
-                            <img v-if="content.img != null" :src="content.img | imgUrl('400_9999_100')" alt="">
+                            <img @load="loaded" v-if="content.img != null" :src="content.img | imgUrl('400_9999_100')"
+                                 alt="">
                         </figure>
 
                         <header>
@@ -24,18 +25,31 @@
                 </article>
             </div>
         </div>
+        <loading-spinner :load="isLoading"></loading-spinner>
 
     </div>
 </template>
 
 <script>
     import CarouselComponent from './CarouselComponent.vue'
+    import LoadingSpinner from './LoadingSpinnerComponent.vue'
 
     export default {
         name: "Portfolio",
         components: {
             CarouselComponent,
+            LoadingSpinner,
         },
+        data() {
+            return {
+                isLoading: true
+            }
+        },
+        methods: {
+            loaded() {
+                this.isLoading = false
+            }
+        }
     };
 </script>
 
@@ -58,7 +72,7 @@
     h2 {
         max-width: $width;
         margin: 2rem auto 0;
-        padding: 0 20px;
+        /*padding: 0 20px;*/
     }
 
     .list {
