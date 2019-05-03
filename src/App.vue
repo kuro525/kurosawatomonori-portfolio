@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+
         <first-loading v-show="FirstLoading"></first-loading>
         <div v-show="!FirstLoading">
             <header-component></header-component>
@@ -17,7 +18,6 @@
     import FooterComponent from "./views/Footer.vue";
     import NavigationMenuComponent from "./views/NavigationMenu.vue";
     import FirstLoading from './views/FirstLoading.vue'
-
     export default {
         components: {
             HeaderComponent,

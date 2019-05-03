@@ -16,7 +16,7 @@
                 <router-link :to="`Portfolio/${content.url }`"></router-link>
                 <img v-if="content.img" :src="content.img | imgUrl('400_9999_100')" alt="" class="back">
                 <img v-if="content.img" :src="content.img | imgUrl('1080_9999_100')" alt="" class="topimg">
-                <div class="info">
+                <div v-if="!load" class="info">
                     <svg>
                         <text x="10%" y="85%" :class="{ textline:index === page }">{{content.title}}</text>
                     </svg>
@@ -34,6 +34,7 @@
     import {Carousel, Slide} from 'vue-carousel';
 
     export default {
+        props:['load'],
         name: "CarouselComponent",
         components: {
             Carousel,

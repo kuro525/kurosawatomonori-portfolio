@@ -11,15 +11,15 @@
                 </div>
             </header>
             <div class="top">
-                <img v-if="content.img != null" :src="content.img | imgUrl('1080_9999_100')" alt="" class="back">
+                <img @load="loaded" v-if="content.img != null" :src="content.img | imgUrl('1080_9999_100')" alt="" class="back">
                 <img v-if="content.img != null" :src="content.img | imgUrl('1080_9999_100')" alt="" class="topimg">
-                <chara-animation-component :title="content.title"></chara-animation-component>
+                <chara-animation-component v-if="!isLoading" :title="content.title"></chara-animation-component>
 
             </div>
             <portfolio-detail-content :html="content.content"></portfolio-detail-content>
 
         </article>
-
+        <loading-spinner :load="isLoading"></loading-spinner>
     </main>
 
 </template>
@@ -27,17 +27,20 @@
 <script>
     import CharaAnimationComponent from './CharaAnimationComponent.vue'
     import PortfolioDetailContent from './PortfolioDetailContent.vue'
+    import LoadingSpinner from './LoadingSpinnerComponent.vue'
 
     export default {
         name: "PortfolioDetail",
         components: {
             PortfolioDetailContent,
             CharaAnimationComponent,
+            LoadingSpinner
         },
 
         data() {
             return {
                 content: null,
+                isLoading: true
             }
         },
 
@@ -66,6 +69,10 @@
                 this.content = content[0];
 
             },
+
+            loaded() {
+                this.isLoading = false
+            }
         },
 
         created() {
