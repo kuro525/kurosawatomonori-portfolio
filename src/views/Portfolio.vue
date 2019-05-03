@@ -58,7 +58,7 @@
     h2 {
         max-width: $width;
         margin: 2rem auto 0;
-        padding: 0 20px;
+        /*padding: 0 20px;*/
     }
 
     .list {

@@ -17,7 +17,10 @@ export default new Vuex.Store({
     actions: {
         setContents({commit}) {
             const contents: any[] = [];
-            db.collection('fl_content').get()
+            db.collection('fl_content')
+                .where('public', '==', true)
+                .orderBy('date', 'desc')
+                .get()
                 .then((response: any) => {
                     response.forEach((data: any) => {
 

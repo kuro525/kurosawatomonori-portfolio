@@ -28,6 +28,8 @@
         data(){
             return{
                 FirstLoading:true
+                // FirstLoading:false
+
             }
         },
 

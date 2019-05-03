@@ -5,21 +5,15 @@
             <p>
                 初めまして。黒澤 智倫<a href="https://twitter.com/kurosawa525" target="_blank" rel="noopener" title="Twitter">(＠kurosawa525)</a>と申します。
                 1997年生まれの21歳。
-                <!--HAL東京と言う専門学校の3年生です。<br>-->
                 HAL東京と言う専門学校でIT学部 Web開発学科を専攻している3年生です。(2021年卒業予定)
             </p>
             <p>
-                <!--主にWebを中心とした技術の勉強をしています。-->
                 <!--主にWebを中心とした勉強をしていて、常に新しい技術への好奇心を持っていろいろな事にチャレンジしています。-->
                 主にWebを中心とした勉強をしていて、最近ではFirebaseやNuxt.js、GraphQLなどの技術に興味があるのでそれらを用いてPWAに対応したWebアプリケーションを開発しています。
             </p>
             <p>
-                <!--現在は、FirebaseやNuxt.js、GraphQLなどの技術を用いてPWAに対応したWebサービスを開発中です。-->
                 「常に新しい技術への好奇心を持ち、必要なスキルをその都度身につけられる」そんなエンジニアを目指し日々勉強しています。
             </p>
-            <!--<p>-->
-                <!--「常に新しい技術を自ら追い求め、必要なスキルをその都度身につけられる」そんなエンジニアを目指し日々勉強しています。-->
-            <!--</p>-->
         </section>
         <section>
             <h2>🤔 この先やってみたいこと</h2>
@@ -173,7 +167,6 @@
         margin-bottom: 60px;
 
         h2 {
-            /*text-align: center;*/
             margin-bottom: 20px;
             font-size: 24px;
         }
@@ -249,7 +242,6 @@
     }
 
     section{
-        /*max-width: 800px;*/
         margin: 0 auto;
         padding: 20px 0;
     }

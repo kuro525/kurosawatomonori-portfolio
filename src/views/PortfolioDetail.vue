@@ -13,22 +13,27 @@
             <div class="top">
                 <img v-if="content.img != null" :src="content.img | imgUrl('1080_9999_100')" alt="" class="back">
                 <img v-if="content.img != null" :src="content.img | imgUrl('1080_9999_100')" alt="" class="topimg">
-                <h1>{{content.title}}</h1>
-            </div>
-
-            <div class="content" v-html="content.content">
+                <chara-animation-component :title="content.title"></chara-animation-component>
 
             </div>
-
+            <portfolio-detail-content :html="content.content"></portfolio-detail-content>
 
         </article>
+
     </main>
 
 </template>
 
 <script>
+    import CharaAnimationComponent from './CharaAnimationComponent.vue'
+    import PortfolioDetailContent from './PortfolioDetailContent.vue'
+
     export default {
         name: "PortfolioDetail",
+        components: {
+            PortfolioDetailContent,
+            CharaAnimationComponent,
+        },
 
         data() {
             return {
@@ -74,15 +79,6 @@
 </script>
 
 <style scoped lang="scss">
-
-    @media screen and (min-width: 897px) {
-
-        .top {
-            height: 500px;
-
-        }
-    }
-
     header {
         max-width: 900px;
         margin: 0 auto;
@@ -92,7 +88,7 @@
             display: block;
             font-size: 14px;
             color: #999;
-            margin-bottom: 1.2rem;
+            margin: 1.2rem 0;
         }
 
         h1 {
@@ -108,7 +104,7 @@
                 font-weight: 500;
             }
 
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
 
         }
     }
@@ -116,7 +112,6 @@
 
     .top {
         position: relative;
-        /*background-color: #fff;*/
         overflow: hidden;
         margin-bottom: 3rem;
 
@@ -153,9 +148,19 @@
         }
     }
 
-    .content {
-        max-width: 900px;
-        margin: 0 auto 3rem;
-        padding: 0 2rem ;
+    @media screen and (max-width: 480px) {
+        header {
+            h1 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 897px) {
+
+        .top {
+            height: 500px;
+
+        }
     }
 </style>

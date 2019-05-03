@@ -18,7 +18,7 @@ export default new Router({
     scrollBehavior(to, from, savedPosition) {
         if (savedPosition) {
 
-            console.log(savedPosition);
+            // console.log(savedPosition);
 
             return savedPosition;
         } else {
