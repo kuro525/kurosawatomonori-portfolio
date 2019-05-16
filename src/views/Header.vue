@@ -1,9 +1,9 @@
 <template>
     <header class="Info">
-        <div class="imgFilter">
+        <figure>
             <img v-bind:src="myPicture" class="img_down" alt="myPicture">
             <img v-bind:src="myPicture" class="img_up" alt="myPicture">
-        </div>
+        </figure>
         <img v-bind:src="myPicture" class="faceImg" alt="myPicture">
         <h1 class="name">TOMONORI KUROSAWA</h1>
         <p class="job">Web Developer</p>
@@ -16,7 +16,7 @@
         name: "Header",
         data() {
             return {
-                myPicture: "https://firebasestorage.googleapis.com/v0/b/hogehoge-3d7a7.appspot.com/o/IMG_13342.jpg?alt=media&token=9ec9e498-beaa-44a0-8c0a-0bd374c4f1ac",
+                myPicture: "https://firebasestorage.googleapis.com/v0/b/portfolio-161c4.appspot.com/o/flamelink%2Fmedia%2F3p8hWOrdR1EQi6ZiVbWX_myimg.jpg?alt=media&token=a5f92df6-93cc-4f09-9b10-aba256370dd2",
             };
         },
     };
@@ -28,7 +28,7 @@
         /*position: relative;*/
         $blurPx: 15px;
 
-        .imgFilter {
+        figure {
             height: 150px;
             width: 100%;
             position: absolute;

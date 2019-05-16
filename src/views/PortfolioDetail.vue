@@ -6,12 +6,12 @@
                 <h1>{{content.entryTitle}}</h1>
                 <div class="tag">
                     <span v-for="tag in content.tags">
-                        #{{ tag }}
+                        {{ tag }}
                     </span>
                 </div>
             </header>
             <div class="top">
-                <img @load="loaded" v-if="content.img != null" :src="content.img | imgUrl('1080_9999_100')" alt="" class="back">
+                <img @load="isLoading = false" v-if="content.img != null" :src="content.img | imgUrl('1080_9999_100')" alt="" class="back">
                 <img v-if="content.img != null" :src="content.img | imgUrl('1080_9999_100')" alt="" class="topimg">
                 <chara-animation-component v-if="!isLoading" :title="content.title"></chara-animation-component>
 
@@ -69,10 +69,6 @@
                 this.content = content[0];
 
             },
-
-            loaded() {
-                this.isLoading = false
-            }
         },
 
         created() {
@@ -106,9 +102,16 @@
 
         .tag {
             span {
-                font-size: 16px;
-                margin-right: 10px;
+                color: #525252;
+                font-size: 14px;
+                margin-right: 0.5rem;
                 font-weight: 500;
+
+                border: solid 1px #cdcdcd;
+                border-radius: 20px;
+                padding: 0.2rem 0.8rem;
+                margin-bottom: 0.5rem;
+                display: inline-block;
             }
 
             margin-bottom: 2rem;
