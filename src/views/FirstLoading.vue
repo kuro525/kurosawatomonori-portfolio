@@ -1,7 +1,8 @@
 <template>
     <div class="firstLoading">
         <svg>
-            <text x="50%" y="30%" font-size="45" font-family="Merriweather" class="textline name">Tomonori kurosawa</text>
+            <text x="50%" y="30%" font-size="45" font-family="Merriweather" class="textline name">Tomonori kurosawa
+            </text>
             <text x="50%" y="65%" font-size="30" font-family="Merriweather" class="textline dev">Web Developer</text>
 
         </svg>
@@ -25,19 +26,15 @@
         }
     }
 
-
     .firstLoading {
         font-weight: 600;
         position: fixed;
         top: 0;
-        /*background-color: red;*/
-        background-image: url("https://firebasestorage.googleapis.com/v0/b/portfolio-161c4.appspot.com/o/flamelink%2Fmedia%2Frdwm7HoWHwwzgD2kajBp_IMGP1829.jpg?alt=media&token=0283b53a-0880-4a29-bc30-8dc44f366fd8");
+        background-image: url("https://firebasestorage.googleapis.com/v0/b/portfolio-161c4.appspot.com/o/flamelink%2Fmedia%2FFirstLoading.jpg?alt=media&token=d21cf917-d832-449e-992a-bd2886e842e7");
         background-size: cover;
-        /*opacity: 0.7;*/
         height: 100vh;
         width: 100vw;
         z-index: 10;
-
         display: grid;
         justify-content: center;
         align-items: center;
@@ -59,12 +56,12 @@
 
             @keyframes stroke-anim {
 
-                0%{
+                0% {
                     stroke: #fff;
                     stroke-dashoffset: 155%;
-                    fill:none;
+                    fill: none;
                 }
-                40%{
+                40% {
                     stroke: #fff;
 
                     stroke-dashoffset: 100%;
@@ -76,11 +73,11 @@
                     stroke: #fff;
 
                 }
-                80%{
+                80% {
                     fill: rgba(255, 255, 255, 0.8);
 
                 }
-                100%{
+                100% {
                     stroke: #fff;
                     fill: rgba(255, 255, 255, 1);
 

@@ -8,8 +8,8 @@
                 HAL東京と言う専門学校でIT学部 Web開発学科を専攻している3年生です。(2021年卒業予定)
             </p>
             <p>
-                <!--主にWebを中心とした勉強をしていて、常に新しい技術への好奇心を持っていろいろな事にチャレンジしています。-->
-                主にWebを中心とした勉強をしていて、最近ではFirebaseやNuxt.js、GraphQLなどの技術に興味があるのでそれらを用いてPWAに対応したWebアプリケーションを開発しています。
+                <!--主にWebを中心とした勉強をしていて、最近ではFirebaseやNuxt.js、GraphQLなどの技術に興味があるのでそれらを用いてPWAに対応したWebアプリケーションを開発しています。-->
+                主にWebを中心とした勉強をしていて、最近ではFirebaseやNuxt.jsなどの技術に興味があるのでそれらを用いてSPAやPWAに対応したWebアプリケーションを開発しています。
             </p>
             <p>
                 「常に新しい技術への好奇心を持ち、必要なスキルをその都度身につけられる」そんなエンジニアを目指し日々勉強しています。
@@ -73,12 +73,12 @@
                     <div class="percent" style="width:70%"></div>
                 </div>
             </div>
-            <div class="skill">
-                <span>Vue Native</span>
-                <div class="bar">
-                    <div class="percent" style="width:5%"></div>
-                </div>
-            </div>
+            <!--<div class="skill">-->
+                <!--<span>Vue Native</span>-->
+                <!--<div class="bar">-->
+                    <!--<div class="percent" style="width:5%"></div>-->
+                <!--</div>-->
+            <!--</div>-->
             <div class="skill">
                 <span>Firebase</span>
                 <div class="bar">
@@ -88,7 +88,7 @@
             <div class="skill">
                 <span>GraphQL</span>
                 <div class="bar">
-                    <div class="percent" style="width:5%"></div>
+                    <div class="percent" style="width:2%"></div>
                 </div>
             </div>
             <div class="skill">
@@ -133,7 +133,7 @@
         </section>
         <section id="">
             <h2>🖊 資格</h2>
-            <p>基本情報技術者</p>
+            <!--<p>基本情報技術者</p>-->
             <p>調理師免許</p>
         </section>
         <section id="sns">

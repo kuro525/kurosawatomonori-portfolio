@@ -50,9 +50,12 @@
 
         img{
             display: block;
-            width: 500px;
+            /*width: 500px;*/
             margin: 0 auto;
             max-width: 100%;
+        }
+        .image{
+            width: 500px;
         }
     }
 

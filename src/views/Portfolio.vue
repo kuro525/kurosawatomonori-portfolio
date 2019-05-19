@@ -13,11 +13,11 @@
 
                         <header>
                             <time>{{content.date | dayFormat }}</time>
-                            <h2>{{ content.entryTitle}}</h2>
+                            <h3>{{ content.entryTitle}}</h3>
 
-                            <a v-for="tag in content.tags" class="tag">
-                                #{{ tag }}
-                            </a>
+                            <span v-for="tag in content.tags" class="tag">
+                                {{ tag }}
+                            </span>
 
                         </header>
 
@@ -47,7 +47,9 @@
         },
         methods: {
             loaded() {
-                this.isLoading = false
+                setTimeout(() => {
+                    this.isLoading = false
+                },300)
             }
         }
     };
@@ -114,18 +116,24 @@
                         margin-bottom: 0.5rem;
                     }
 
-                    h2 {
-                        margin: 0 0 20px 0;
+                    h3 {
+                        margin: 0 0 25px 0;
                         color: #333;
                         font-size: 16px;
                         font-weight: 600;
                     }
 
-                    a {
-                        color: #333333;
-                        font-size: 16px;
-                        margin-right: 10px;
+                    span {
+                        color: #525252;
+                        font-size: 14px;
+                        margin-right: 0.5rem;
                         font-weight: 500;
+
+                        border: solid 1px #cdcdcd;
+                        border-radius: 20px;
+                        padding: 0.2rem 0.8rem;
+                        margin-bottom: 0.5rem;
+                        display: inline-block;
                     }
                 }
             }

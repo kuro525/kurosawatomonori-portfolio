@@ -17,7 +17,7 @@
     @media screen and (max-width: 480px) {
         .textline {
             font-size: 40px;
-            animation: stroke-anim 5s linear;
+            animation: stroke-anim 3s linear;
         }
         .info{
             height: 40px;
@@ -39,7 +39,7 @@
     @media screen and (min-width: 481px) {
         .textline {
             font-size: 40px;
-            animation: stroke-anim 5s linear;
+            animation: stroke-anim 3s linear;
         }
         @keyframes stroke-anim {
             0% {
