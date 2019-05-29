@@ -13,6 +13,10 @@ import 'vuetify/dist/vuetify.min.css';
 Vue.use(Vuetify, {
     iconfont: 'fa',
 });
+import 'material-design-icons-iconfont/dist/material-design-icons.css' // Ensure you are using css-loader
+Vue.use(Vuetify, {
+    iconfont: 'md',
+})
 
 import firebase from 'firebase/app';
 import 'firebase/auth';

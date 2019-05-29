@@ -4,7 +4,7 @@
             <h2>👨🏻‍💻 Profile</h2>
             <p>
                 初めまして。黒澤 智倫<a href="https://twitter.com/kurosawa525" target="_blank" rel="noopener" title="Twitter">(＠kurosawa525)</a>と申します。
-                1997年生まれの21歳。
+                1997年生まれの22歳。
                 HAL東京と言う専門学校でIT学部 Web開発学科を専攻している3年生です。(2021年卒業予定)
             </p>
             <p>
@@ -35,90 +35,12 @@
             </p>
         </section>
 
-        <section id="skills">
-            <h2>💻 スキル</h2>
-            <div class="skill">
-                <span>HTML/CSS</span>
-                <div class="bar">
-                    <div class="percent" style="width:85%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>PHP</span>
-                <div class="bar">
-                    <div class="percent" style="width:70%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>Laravel</span>
-                <div class="bar">
-                    <div class="percent" style="width:70%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>JavaScript</span>
-                <div class="bar">
-                    <div class="percent" style="width:70%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>TypeScript</span>
-                <div class="bar">
-                    <div class="percent" style="width:20%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>Vue.js (Nuxt.js)</span>
-                <div class="bar">
-                    <div class="percent" style="width:70%"></div>
-                </div>
-            </div>
-            <!--<div class="skill">-->
-                <!--<span>Vue Native</span>-->
-                <!--<div class="bar">-->
-                    <!--<div class="percent" style="width:5%"></div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <div class="skill">
-                <span>Firebase</span>
-                <div class="bar">
-                    <div class="percent" style="width:70%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>GraphQL</span>
-                <div class="bar">
-                    <div class="percent" style="width:2%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>MySQL</span>
-                <div class="bar">
-                    <div class="percent" style="width:60%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>NoSQL</span>
-                <div class="bar">
-                    <div class="percent" style="width:50%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>Docker</span>
-                <div class="bar">
-                    <div class="percent" style="width:20%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>Git</span>
-                <div class="bar">
-                    <div class="percent" style="width:70%"></div>
-                </div>
-            </div>
-        </section>
+        <skills />
 
 
-        <section id="contest">
+
+
+        <section class="contest">
             <h2>🏆 受賞歴</h2>
             <ul>
                 <li>
@@ -131,12 +53,21 @@
                 </li>
             </ul>
         </section>
-        <section id="">
+        <section class="Certificate">
             <h2>🖊 資格</h2>
-            <!--<p>基本情報技術者</p>-->
-            <p>調理師免許</p>
+            <ul>
+                <li>
+                    <span>2016</span>
+                    調理師免許
+                </li>
+                <li>
+                    <span>2019</span>
+                    基本情報技術者
+                </li>
+
+            </ul>
         </section>
-        <section id="sns">
+        <section class="sns">
             <h2>📣 SNS</h2>
             <a href="https://twitter.com/kurosawa525" target="_blank" rel="noopener" class="fa-stack" title="Twitterでフォロー">
                 <i class="fab fa-twitter fa-stack-2x"></i>
@@ -157,8 +88,12 @@
 </template>
 
 <script>
+    import Skills from "./ProfileSkills.vue"
     export default {
         name: "Profile",
+        components: {
+            Skills
+        }
     };
 </script>
 
@@ -181,32 +116,9 @@
         }
     }
 
-    #skills {
-        .skill {
-            margin-bottom: 30px;
 
-            span {
-                display: block;
-                margin-bottom: 3px;
-            }
 
-            .bar {
-                $barHeight: 8px;
-                background-color: #dcdcdc;
-                width: 100%;
-                height: 8px;
-                border-radius: $barHeight;
-
-                .percent {
-                    height: 100%;
-                    background-color: #ffd891;
-                    border-radius: $barHeight 0 0 $barHeight;
-                }
-            }
-        }
-    }
-
-    #contest{
+    .contest, .Certificate{
         ul {
             list-style: none;
             padding: 0;
@@ -226,7 +138,7 @@
         }
     }
 
-    #sns {
+    .sns {
         a {
             margin-right: 16px;
             color: #000;
