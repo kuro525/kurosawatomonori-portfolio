@@ -1,0 +1,35 @@
+[debug] [2019-05-29T11:40:47.344Z] ----------------------------------------------------------------------
+[debug] [2019-05-29T11:40:47.346Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting
+[debug] [2019-05-29T11:40:47.346Z] CLI Version:   6.7.1
+[debug] [2019-05-29T11:40:47.346Z] Platform:      darwin
+[debug] [2019-05-29T11:40:47.346Z] Node Version:  v8.12.0
+[debug] [2019-05-29T11:40:47.346Z] Time:          Wed May 29 2019 20:40:47 GMT+0900 (JST)
+[debug] [2019-05-29T11:40:47.346Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-29T11:40:47.357Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-29T11:40:47.357Z] > authorizing via signed-in user
+[debug] [2019-05-29T11:40:47.357Z] [iam] checking project portfolio-161c4 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-05-29T11:40:47.358Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-05-29T11:40:47.359Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-05-29T11:40:47.526Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-29T11:40:47.544Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-161c4:testIamPermissions  
+
+[debug] [2019-05-29T11:40:49.341Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-29T11:40:49.342Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/portfolio-161c4  
+ 
+[debug] [2019-05-29T11:40:50.157Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'portfolio-161c4'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-05-29T11:40:51.761Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/portfolio-161c4/versions  
+
+[debug] [2019-05-29T11:40:53.164Z] <<< HTTP RESPONSE 200
+[info] i  hosting[portfolio-161c4]: beginning deploy...
+[info] i  hosting[portfolio-161c4]: found 83 files in dist
+[debug] [2019-05-29T11:40:53.181Z] [hosting] hash cache [ZGlzdA] load error: lines is not defined
+[debug] [2019-05-29T11:40:54.090Z] [hosting] hash cache [ZGlzdA] stored for 83 files
+[debug] [2019-05-29T11:40:54.090Z] [hosting][hash queue][FINAL]
+[debug] [2019-05-29T11:40:54.091Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/portfolio-161c4/versions/d9c2880a244b5ff4:populateFiles  
+ <request body omitted>
