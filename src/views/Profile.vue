@@ -3,8 +3,8 @@
         <section class="about">
             <h2>👨🏻‍💻 Profile</h2>
             <p>
-                初めまして。黒澤 智倫<a href="https://twitter.com/kurosawa525" target="_blank" rel="noopener" title="Twitter">(＠kurosawa525)</a>と申します。
-                1997年生まれの22歳。
+                初めまして。黒澤 智倫<a href="https://twitter.com/kurosawa525" rel="noopener" target="_blank" title="Twitter">(＠kurosawa525)</a>と申します。
+                1997年生まれの{{age}}歳。
                 HAL東京と言う専門学校でIT学部 Web開発学科を専攻している3年生です。(2021年卒業予定)
             </p>
             <p>
@@ -89,10 +89,27 @@
 
 <script>
     import Skills from "./ProfileSkills.vue"
+    import moment from "moment"
+
     export default {
         name: "Profile",
         components: {
             Skills
+        },
+        data() {
+            return {
+                age: 22
+            }
+        },
+        methods: {
+            Birthday() {
+                const from = moment('1997-05-25')
+                const to = moment()
+                this.age = to.diff(from, 'year')
+            }
+        },
+        created() {
+            this.Birthday()
         }
     };
 </script>
@@ -108,6 +125,7 @@
 
         p {
             line-height: 1.6;
+
             a {
                 color: #08c;
                 text-decoration: none;
