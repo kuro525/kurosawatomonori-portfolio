@@ -30,14 +30,12 @@
             </p>
             <p>
                 最近は写真を撮ることにもハマっていて綺麗に撮れた写真はinstagram
-                <a href="https://www.instagram.com/kuro.photos" target="_blank" rel="noopener" title="instagram">(kuro.photos)</a>
+                <a href="https://www.instagram.com/kuro.photos" rel="noopener" target="_blank" title="instagram">(kuro.photos)</a>
                 に投稿しています！
             </p>
         </section>
 
-        <skills />
-
-
+        <skills/>
 
 
         <section class="contest">
@@ -69,17 +67,19 @@
         </section>
         <section class="sns">
             <h2>📣 SNS</h2>
-            <a href="https://twitter.com/kurosawa525" target="_blank" rel="noopener" class="fa-stack" title="Twitterでフォロー">
+            <a class="fa-stack" href="https://twitter.com/kurosawa525" rel="noopener" target="_blank"
+               title="Twitterでフォロー">
                 <i class="fab fa-twitter fa-stack-2x"></i>
             </a>
-            <a href="https://www.instagram.com/mono.kuro_/" target="_blank" rel="noopener" class="fa-stack" title="instagramでフォロー">
+            <a class="fa-stack" href="https://www.instagram.com/mono.kuro_/" rel="noopener" target="_blank"
+               title="instagramでフォロー">
                 <i class="fab fa-instagram fa-stack-2x"></i>
             </a>
-            <a href="https://github.com/kuro525" target="_blank" rel="noopener" class="fa-stack" title="Github">
+            <a class="fa-stack" href="https://github.com/kuro525" rel="noopener" target="_blank" title="Github">
                 <i class="fab fa-github fa-stack-2x"></i>
             </a>
-            <a href="https://qiita.com/kurosawatomonori" target="_blank" rel="noopener" class="fa-stack" title="Qiita">
-                <i class="fas fa-square fa-stack-2x" ></i>
+            <a class="fa-stack" href="https://qiita.com/kurosawatomonori" rel="noopener" target="_blank" title="Qiita">
+                <i class="fas fa-square fa-stack-2x"></i>
                 <i class="fas fa-search fa-stack-1x fa-inverse fa-2x"></i>
             </a>
         </section>
@@ -135,11 +135,11 @@
     }
 
 
-
-    .contest, .Certificate{
+    .contest, .Certificate {
         ul {
             list-style: none;
             padding: 0;
+
             li {
                 margin-bottom: 20px;
                 font-size: 16px;
@@ -171,7 +171,7 @@
 
     }
 
-    section{
+    section {
         margin: 0 auto;
         padding: 20px 0;
     }
