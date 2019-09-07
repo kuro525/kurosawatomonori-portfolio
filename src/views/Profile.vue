@@ -48,7 +48,6 @@
                 </li>
                 <li>
                     <span>2019</span>
-                    HAL東京 進級制作展「HEW 2019」 IT大賞
                     <router-link to="/Portfolio/kaopass">
                         HAL東京 進級制作展「HEW 2019」 IT大賞
                         <i class="fas fa-external-link-alt"></i>
