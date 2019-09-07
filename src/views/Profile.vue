@@ -8,7 +8,6 @@
                 HAL東京と言う専門学校でIT学部 Web開発学科を専攻している3年生です。(2021年卒業予定)
             </p>
             <p>
-                <!--主にWebを中心とした勉強をしていて、最近ではFirebaseやNuxt.js、GraphQLなどの技術に興味があるのでそれらを用いてPWAに対応したWebアプリケーションを開発しています。-->
                 主にWebを中心とした勉強をしていて、最近ではFirebaseやNuxt.jsなどの技術に興味があるのでそれらを用いてSPAやPWAに対応したWebアプリケーションを開発しています。
             </p>
             <p>
@@ -20,7 +19,6 @@
             <p>
                 自分は人に喜んでもらう事が好きなので、少しでも多くの人が日々の生活を便利にそして楽しくなれるようなサービスの開発をしたいです。
             </p>
-
         </section>
 
         <section>
@@ -43,13 +41,47 @@
             <ul>
                 <li>
                     <span>2018</span>
-                    HAL東京 進級制作展「HEW 2018」 金賞
+                    <router-link to="/Portfolio/facespot">
+                        HAL東京 進級制作展「HEW 2018」 金賞
+                        <i class="fas fa-external-link-alt"></i>
+                    </router-link>
                 </li>
                 <li>
                     <span>2019</span>
                     HAL東京 進級制作展「HEW 2019」 IT大賞
+                    <router-link to="/Portfolio/kaopass">
+                        HAL東京 進級制作展「HEW 2019」 IT大賞
+                        <i class="fas fa-external-link-alt"></i>
+                    </router-link>
                 </li>
             </ul>
+        </section>
+        <section class="internship">
+            <h2>🏢 インターンシップ参加企業</h2>
+            <ul>
+                <li>
+                    <span>2019</span>
+                    Fringe 81株式会社
+                </li>
+                <li>
+                    <span>2019</span>
+                    株式会社エイチーム
+                </li>
+                <li>
+                    <span>2019</span>
+                    WEBCAMP
+                </li>
+                <li>
+                    <span>2019</span>
+                    合同会社DMM.com
+                </li>
+<!--                <li>-->
+<!--                    <span>2019</span>-->
+<!--                    チームラボエンジニアリング株式会社-->
+<!--                </li>-->
+            </ul>
+            <small>＊ 参加順</small>
+
         </section>
         <section class="Certificate">
             <h2>🖊 資格</h2>
@@ -62,7 +94,6 @@
                     <span>2019</span>
                     基本情報技術者
                 </li>
-
             </ul>
         </section>
         <section class="sns">
@@ -125,17 +156,10 @@
 
         p {
             line-height: 1.6;
-
-            a {
-                color: #08c;
-                text-decoration: none;
-            }
-
         }
     }
 
-
-    .contest, .Certificate {
+    .contest, .Certificate, .internship {
         ul {
             list-style: none;
             padding: 0;
@@ -152,6 +176,15 @@
                     line-height: 1;
                     margin-bottom: 6px;
                 }
+
+                a {
+                    color: #333333;
+                }
+
+                i {
+                    padding: 0 10px;
+                    color: #525252;
+                }
             }
         }
     }
@@ -159,7 +192,7 @@
     .sns {
         a {
             margin-right: 16px;
-            color: #000;
+            color: #333333;
         }
     }
 
