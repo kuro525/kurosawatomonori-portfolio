@@ -16,7 +16,7 @@
         name: "Header",
         data() {
             return {
-                myPicture: "https://firebasestorage.googleapis.com/v0/b/portfolio-161c4.appspot.com/o/flamelink%2Fmedia%2F3p8hWOrdR1EQi6ZiVbWX_myimg.jpg?alt=media&token=a5f92df6-93cc-4f09-9b10-aba256370dd2",
+                myPicture: "https://firebasestorage.googleapis.com/v0/b/portfolio-161c4.appspot.com/o/flamelink%2Fmedia%2Fmy_img2.JPG?alt=media&token=f12a1cd4-3cfa-4380-bb03-b2eee11cba9d",
             };
         },
     };
