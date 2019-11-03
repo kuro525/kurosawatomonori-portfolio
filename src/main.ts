@@ -27,6 +27,7 @@ import 'flamelink/content';
 import 'flamelink/storage';
 
 import firebaseConfig from '@/firebaseConfig';
+import VueAnalytics from 'vue-analytics';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 export const db = firebaseApp.firestore();
@@ -52,6 +53,11 @@ Vue.filter('dayFormat', (date: string) => {
     const value = date.substr(0, 7);
     const reg = new RegExp(`-`, 'g');
     return value.replace(reg, '.');
+});
+
+Vue.use(VueAnalytics,{
+    id: process.env.VUE_APP_ANALYTICS_ID,
+    router
 });
 
 new Vue({
