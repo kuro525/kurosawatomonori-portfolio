@@ -70,7 +70,7 @@
             <ul>
                 <li>
                     <span>2019</span>
-                    Fringe 81株式会社
+                    Fringe81株式会社
                 </li>
                 <li>
                     <span>2019</span>
@@ -78,7 +78,7 @@
                 </li>
                 <li>
                     <span>2019</span>
-                    WEBCAMP
+                    DMM WEBCAMP
                 </li>
                 <li>
                     <span>2019</span>
