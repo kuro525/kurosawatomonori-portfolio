@@ -16,7 +16,9 @@
         name: "Header",
         data() {
             return {
-                myPicture: "https://firebasestorage.googleapis.com/v0/b/portfolio-161c4.appspot.com/o/flamelink%2Fmedia%2Fmy_img2.JPG?alt=media&token=f12a1cd4-3cfa-4380-bb03-b2eee11cba9d",
+                // myPicture: "https://firebasestorage.googleapis.com/v0/b/portfolio-161c4.appspot.com/o/flamelink%2Fmedia%2Fmy_img2.JPG?alt=media&token=f12a1cd4-3cfa-4380-bb03-b2eee11cba9d",
+              myPicture: "https://firebasestorage.googleapis.com/v0/b/portfolio-161c4.appspot.com/o/flamelink%2Fmedia%2Fmy_image3.jpg?alt=media&token=bf024f80-5f4a-46d7-a402-0dd44626c521",
+
             };
         },
     };
