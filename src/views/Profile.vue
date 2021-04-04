@@ -5,7 +5,7 @@
             <p>
                 初めまして。黒澤 智倫<a href="https://twitter.com/kurosawa525" rel="noopener" target="_blank" title="Twitter">(＠kurosawa525)</a>と申します。
                 1997年生まれの{{age}}歳。
-                HAL東京と言う専門学校でIT学部 Web開発学科を専攻しています。(2021年卒業予定)
+                都内でWebエンジニアをしています。
             </p>
             <p>
                 主にWebを中心とした勉強をしていて、最近ではFirebaseやNuxt.jsなどの技術に興味があるのでそれらを用いてSPAやPWAに対応したWebアプリケーションを開発しています。
